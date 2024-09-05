@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: TDT
+  profiles:
+    default: dev
+  liquibase:
+    enabled: true
+    change-log: db/master.xml
+  data:
+    redis:
+      database: 0
+      host: localhost
+      port: 5432
+      password: dothang3z
+      username: TDT
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/TDT
+    username: postgres
+    password: dothang3z
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
