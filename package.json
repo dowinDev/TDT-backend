@@ -1,4 +1,14 @@
 {
+  "name": "food-link",
+  "version": "1.0.0",
+  "description": "A RESTful API for a food delivery service",
+  "main": "server.js",
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgresql",
+    "restapi"
+  ],
   "dependencies": {
     "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.6",
