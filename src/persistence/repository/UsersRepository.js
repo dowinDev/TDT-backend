@@ -9,8 +9,8 @@ class UsersRepository {
         return await Users.findByPk(id);
     }
 
-    async getAllPosts() {
-        return await Users.findAll();
+    async getAllUsers() {
+        return "hello, world!";
     }
 
     async updatePost(id, data) {

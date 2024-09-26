@@ -1,9 +1,9 @@
-const userService = require('../service/usersService');
+const {usersService} = require('../service/index');
 
 class UserController {
     async createUser(req, res) {
         try {
-            const user = await userService.createUser(req.body);
+            const user = await usersService.createUser(req.body);
             res.json(user);
         } catch (error) {
             res.status(500).json({ error: error.message });
@@ -12,7 +12,7 @@ class UserController {
 
     async getUserById(req, res) {
         try {
-            const user = await userService.getUserById(req.params.id);
+            const user = await usersService.getUserById(req.params.id);
             if (user) {
                 res.json(user);
             } else {
@@ -25,7 +25,7 @@ class UserController {
 
     async getAllUsers(req, res) {
         try {
-            const users = await userService.getAllUsers();
+            let users = await usersService.getAllUsers();
             res.json(users);
         } catch (error) {
             res.status(500).json({ error: error.message });
@@ -34,7 +34,7 @@ class UserController {
 
     async updateUser(req, res) {
         try {
-            const updated = await userService.updateUser(req.params.id, req.body);
+            const updated = await usersService.updateUser(req.params.id, req.body);
             res.json({ updated });
         } catch (error) {
             res.status(500).json({ error: error.message });
@@ -43,7 +43,7 @@ class UserController {
 
     async deleteUser(req, res) {
         try {
-            await userService.deleteUser(req.params.id);
+            await usersService.deleteUser(req.params.id);
             res.status(204).send();
         } catch (error) {
             res.status(500).json({ error: error.message });

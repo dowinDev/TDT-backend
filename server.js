@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const config = require('./src/config/sv.config');
 const connection = require('./src/db/connection');
-const {} = require('./src/router/index');
+const {users,} = require('./src/router/index');
 
 require('dotenv').config();
 const server = express();
@@ -32,7 +32,7 @@ server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 
 // simple route
-
+require('./src/router/index')(server);
 
 // error handler
 server.on('error', onError);
