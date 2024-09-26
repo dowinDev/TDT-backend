@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const config = require('./src/config/sv.config');
-const connection = require('./src/db/connection');
+const connection = require('./db/connection');
 const {users,} = require('./src/router/index');
 
 require('dotenv').config();

@@ -3,16 +3,16 @@
 const fs = require('fs');
 const path = require('path');
 const {Sequelize,DataTypes} = require('sequelize');
-const users = require("../persistence/entity/Users");
+const users = require("../src/persistence/entity/Users");
 const e = require("express");
 require('dotenv').config();
 
 //folder name
-const entity = path.join(__dirname, '../persistence/entity');
+const entity = path.join(__dirname, '../src/persistence/entity');
 
 //environment
 const env = process.env.NODE_ENV || 'dev';
-const config = require('../config/db.config.js')[env];
+const config = require('../src/config/db.config.js')[env];
 
 let db = {};
 

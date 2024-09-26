@@ -29,6 +29,9 @@
   npm install pg-hstore^2.3.4
   npm install reflect-metadata^0.2.2
   npm install sequelize^6.37.3
+  npm install swagger-jsdoc^7.0.0
+  npm install swagger-ui-express^4.1.6
+  npm install bcrypt^5.0.1 
   ```
 
 ## 🚀 Run Locally

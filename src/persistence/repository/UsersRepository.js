@@ -1,8 +1,10 @@
+'';
+
 const Users = require('../entity/Users');
 
 class UsersRepository {
     async createPost(data) {
-        return await Users.create(data);
+        return Users.create(data);
     }
 
     async getPostById(id) {
@@ -19,6 +21,10 @@ class UsersRepository {
 
     async deletePost(id) {
         return await Users.destroy({ where: { id } });
+    }
+
+    async register(data) {
+       return Users.create(data);
     }
 }
 
