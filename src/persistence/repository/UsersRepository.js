@@ -1,0 +1,25 @@
+const Users = require('../entity/Users');
+
+class UsersRepository {
+    async createPost(data) {
+        return await Users.create(data);
+    }
+
+    async getPostById(id) {
+        return await Users.findByPk(id);
+    }
+
+    async getAllPosts() {
+        return await Users.findAll();
+    }
+
+    async updatePost(id, data) {
+        return await Users.update(data, { where: { id } });
+    }
+
+    async deletePost(id) {
+        return await Users.destroy({ where: { id } });
+    }
+}
+
+module.exports = new UsersRepository();
