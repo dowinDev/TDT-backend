@@ -1,62 +1,118 @@
-# 🚀 Welcome to my project
-## 📦 Installation
-```bash
-  npm install
-  ```
-## 🛠️ Create .env file
-- create a .env file in the root directory
-- **example**:
-```bash
-  PORT=3000
-  DB_HOST=localhost
-  DB_USER=postgres
-  DB_PASS=123456
-  DB_NAME=postgres
-  DB_PORT=5432
-  ```
-## 📚 Libraries 
-- need to install the following libraries
-```bash
-  npm install body-parser^1.20.3
-  npm install cookie-parser^1.4.6
-  npm install cors^2.8.5
-  npm install debug^4.3.7
-  npm install dotenv^16.4.5
-  npm install express^4.21.0
-  npm install http-errors^2.0.0
-  npm install morgan^1.10.0
-  npm install pg^8.13.0
-  npm install pg-hstore^2.3.4
-  npm install reflect-metadata^0.2.2
-  npm install sequelize^6.37.3
-  npm install swagger-jsdoc^7.0.0
-  npm install swagger-ui-express^4.1.6
-  npm install bcrypt^5.0.1 
-  ```
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-## 🚀 Run Locally
-```bash
-  npm start
-  ```
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## 🚀 Run Locally with nodemon
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+## Description
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Project setup
+
 ```bash
-  node bin/www
-  ```
-stop the server by pressing `Ctrl + C`
-or
+$ npm install
+```
+## install framework
+
 ```bash
-  netstat -ano | findstr :3000
-  ```
-Paste the PID number in the following command
+npm install @types/body-parser
+npm install cookie-parser
+npm install @types/cors -D  
+npm install @types/debug
+npm install @types/dotenv -D
+npm install @types/http-errors
+npm install @types/morgan -D
+npm install @types/reflect-metadata
+npm install @types/swagger-jsdoc
+npm install @types/swagger-ui-express
+npm install @types/bcrypt
+npm install @types/class-transformer class-validator
+npm install @nestjs/sequelize sequelize sequelize-typescript
+npm install --save pg pg-hstore
+npm install --save-dev ts-node ts-node-dev
+```
+## create .env file
+
 ```bash
-   TCP    0.0.0.0:3000           0.0.0.0:0              LISTENING       12345
-  ```
-and run the following command
+DB_NAME=foodLink
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_PORT=5432
+DB_DIALECT=postgres
+
+SV_PORT=3000
+SV_HOST=localhost
+
+NODE_ENV=dev
+```
+## Compile and run the project
+
 ```bash
-  taskkill /PID 12345 /F
-  ```
-## 📝 Documentation
-- [Postman Documentation](https://documenter.getpostman.com/view/12345678/TzJx9z1A)
-- [Swagger Documentation](http://localhost:3000/api-docs)
-- [API Documentation](http://localhost:3000/api-docs)
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Run tests
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+## Resources
+
+Check out a few resources that may come in handy when working with NestJS:
+
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [DoWin](https://www.facebook.com/Dowin2610/)
+- Website - [#](https://#)
+- Front-end - [TDT-frontend](https://github.com/dowinDev/TDT-frontend/tree/Interface)
+
+## License
+
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
